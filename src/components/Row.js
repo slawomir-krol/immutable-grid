@@ -4,13 +4,15 @@ import Cell from "./Cell";
 
 class Row extends React.Component {
 
-    renderCells(row, cells) {
+    renderCells(row, cells, onCellClick) {
         return cells.map((cell, index) => {
             return (
                 <Cell key={index}
                       active={cell.active}
                       rowId={row.id}
-                      columnId={cell.id}/>
+                      columnId={cell.id}
+                      onCellClick={onCellClick}
+                />
             );
         });
     }
@@ -20,12 +22,12 @@ class Row extends React.Component {
     }
 
     render() {
-        const {row} = this.props;
+        const {row, onCellClick} = this.props;
 
         return (
             <div className="row">
                 {this.renderTitleCell(row.title)}
-                {this.renderCells(row, row.cells)}
+                {this.renderCells(row, row.cells, onCellClick)}
             </div>
         );
     }
