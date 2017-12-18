@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: block;
+  width: 700px;
+  float: left;
+  padding-right: 50px;
+}
+
+.row {
+  clear:both;
+}
+
+.cell-title, .cell {
+  float: left;
+  border: 1px solid #eee;
+  background: #ffffff;
+  width: 30px;
+  height: 30px;
+
+}
+
+.cell-title {
+  width: 150px;
+  display: table-cell;
+  vertical-align: middle;
+  text-transform: capitalize;
+  padding-top: 6px;
+}
+
+.cell:hover {
+  background: #999;
+  cursor: pointer;
+}
+
+.active {
+  background: #444;
+}
