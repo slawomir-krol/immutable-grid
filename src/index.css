@@ -29,7 +29,7 @@ body {
   display: table-cell;
   vertical-align: middle;
   text-transform: capitalize;
-  padding-top: 6px;
+  padding-top: 0px;
 }
 
 .cell:hover {
@@ -39,4 +39,10 @@ body {
 
 .active {
   background: #444;
+}
+
+.history {
+  display: block;
+  clear: both;
+  float: left;
 }

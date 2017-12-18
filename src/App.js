@@ -4,6 +4,16 @@ import './App.css';
 import GridContainer from "./components/GridContainer";
 
 class App extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            rows: ['apple', 'banana', 'peach'],
+            columns: 3
+        };
+    }
+
     render() {
         return (
             <div className="App">
@@ -12,7 +22,7 @@ class App extends Component {
                     <h1 className="App-title">Grid with history</h1>
                 </header>
                 <div className="App-intro">
-                    <GridContainer/>
+                    <GridContainer rows={this.state.rows} columns={this.state.columns}/>
                 </div>
             </div>
         );
